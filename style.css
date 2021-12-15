@@ -1191,7 +1191,7 @@ form ul li span:nth-child(1) {
     display: none;
   }
   .page-inner::after {
-    top: 330rem;
+    top: 300rem;
   }
   .projects {
     grid-template-columns: repeat(1, 1fr);
