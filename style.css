@@ -1184,23 +1184,8 @@ form ul li span:nth-child(1) {
   display: none;
 }
 @media (max-width: 1368px) {
-  ::-webkit-scrollbar {
-    width: 0;
-  }
-  #scrollpath {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    background-color: #fd1056;
-  }
-  #progressbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 100%;
-    background-color: #fd1056;
+  .projects .container {
+    height: 340px;
   }
   .main-menu {
     display: none;

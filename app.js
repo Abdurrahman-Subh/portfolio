@@ -18,14 +18,6 @@ hamburger_menu.addEventListener("click", () => {
       links.style.height = "14vh";
       page.style.display = "flex";
     }
-    if (x.matches) {
-      let progress = document.getElementById("progressbar");
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      };
-    }
   }
 
   if (container.classList.contains("active")) {
