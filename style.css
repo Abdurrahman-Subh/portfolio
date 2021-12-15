@@ -1191,7 +1191,7 @@ form ul li span:nth-child(1) {
     display: none;
   }
   .page-inner::after {
-    top: 277rem;
+    top: 330rem;
   }
   .projects {
     grid-template-columns: repeat(1, 1fr);
@@ -1300,5 +1300,8 @@ form ul li span:nth-child(1) {
   }
   .containerM {
     display: block;
+  }
+  .intro-paragraph::after {
+    content: "";
   }
 }
