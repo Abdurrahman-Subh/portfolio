@@ -1,0 +1,1319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #1d1d1d;
+  font-family: "Open Sans", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #909096;
+}
+.page-inner {
+  display: flex;
+  flex-direction: column;
+}
+.page-inner::before {
+  content: "<body>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-left: 15rem;
+}
+.page-inner::after {
+  content: "<body/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  top: 185rem;
+  right: 40px;
+}
+.menu-back {
+  width: 10%;
+  height: 100%;
+}
+
+.main-menu {
+  width: 10%;
+  background-color: #181818;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  display: flex;
+  z-index: 3;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.main-menu_top {
+  background: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  height: 40%;
+}
+.main-menu_top span {
+  color: #909096;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 70px;
+}
+.main-menu_nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #282828;
+}
+.main-menu_nav a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  color: #909096;
+  line-height: 4rem;
+  border-bottom: 1px solid #282828;
+  transition: color 0.3s, background-color 0.3s;
+}
+.main-menu_nav a:hover {
+  color: #08fdd8;
+}
+.social {
+  width: 100%;
+  color: #909096;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 20rem;
+  justify-content: space-around;
+}
+.social li a:hover {
+  color: #fd1056;
+}
+.land-section {
+  width: 90%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding: 100px;
+}
+.text-zone {
+  width: 100%;
+  position: relative;
+}
+.intro {
+  letter-spacing: 8px;
+  font-weight: 200;
+  font-size: 3.9rem;
+  color: #fff;
+  position: relative;
+  line-height: 5rem;
+  font-family: "Permanent Marker", cursive;
+}
+.intro::before {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  position: absolute;
+  margin-top: -5rem;
+  left: -1.5rem;
+}
+.intro::after {
+  content: "<h1/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  position: absolute;
+  margin-top: 3.8rem;
+  margin-left: 2rem;
+}
+.intro img {
+  width: 40px;
+}
+.intro-paragraph {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-top: 3rem;
+  display: block;
+  color: #8d8d8d;
+}
+.intro-paragraph::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+}
+.intro-paragraph::after {
+  content: "<p/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -2rem;
+  bottom: -3rem;
+}
+.blast:hover {
+  display: inline-block;
+  animation: jello 1s infinite;
+  transition: all 0.8s ease-out;
+  color: #08fdd8;
+}
+
+.text-zone ul li {
+  color: #08fdd8;
+  font-size: 16px;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.3em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+.text-zone ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #08fdd8;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.text-zone ul li:hover {
+  color: #000;
+}
+
+.text-zone ul li:hover span {
+  transform: translateY(0) scale(4);
+}
+.text-zone ul li span:nth-child(1) {
+  --n: 1;
+}
+.work ul li {
+  color: #08fdd8;
+  font-size: 16px;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.3em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+.work ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #08fdd8;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.work ul li:hover {
+  color: #000;
+}
+
+.work ul li:hover span {
+  transform: translateY(0) scale(4);
+}
+.work ul li span:nth-child(1) {
+  --n: 1;
+}
+.scroll-down {
+  position: absolute;
+  right: 15px;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.scroll-down-left {
+  left: 15px;
+  right: auto;
+}
+.scroll-down span {
+  font-size: 14px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation: bounce 1.5s infinite;
+  transition: all 0.8s ease-in-out;
+}
+.words {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  color: #1d1d1d;
+  font-size: 0;
+  line-height: 1.5;
+}
+.words::before {
+  content: "<Animation>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 2rem;
+  right: 18rem;
+}
+.words::after {
+  content: "<Animation/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 10rem;
+}
+.words span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 2s;
+}
+.words span {
+  font-size: 5rem;
+  display: inline-block;
+  animation: move 3s ease-in-out infinite;
+}
+.heading {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  color: #fd1056;
+  letter-spacing: 10px;
+  animation: move 5s infinite;
+}
+.heading::before {
+  content: "<h2>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-left: -6rem;
+}
+.heading::after {
+  content: "<h2/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-left: 17rem;
+  margin-top: -2rem;
+}
+.work {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  padding: 100px;
+  overflow: hidden;
+}
+
+.header-div {
+  margin-bottom: 50px;
+}
+.intro-h2 {
+  letter-spacing: 8px;
+  font-weight: 200;
+  font-size: 3.9rem;
+  color: #08fdd8;
+  position: relative;
+  line-height: 5rem;
+  font-family: "Permanent Marker", cursive;
+}
+.intro-h2::before {
+  content: "<h2>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: -2rem;
+}
+.intro-h2::after {
+  content: "<h2/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 3rem;
+  left: 0;
+}
+.work-paragraph {
+  width: 70%;
+  color: #fff;
+}
+.work-paragraph::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+}
+.work-paragraph::after {
+  content: "<p/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -2rem;
+  bottom: -3rem;
+}
+.work-paragraph a {
+  color: #08fdd8;
+}
+.fake-big {
+  overflow: hidden;
+  position: absolute;
+  top: -5rem;
+  left: 52vw;
+  z-index: -1;
+  font-size: 16rem;
+  color: rgba(255, 255, 255, 0.04);
+}
+.projects {
+  width: 85%;
+  margin-left: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects .container {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  height: 300px;
+  background-color: #1d1d1d;
+  padding: 2rem 3rem 2.5rem;
+  border-top: 2px solid #fd2155;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+}
+.content-title1 {
+  color: #0daa93;
+  padding-bottom: 1rem;
+}
+.content-title2 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+.content-paragraph {
+  color: #909096;
+  font-size: 1rem;
+}
+.project-content4 {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.projects::before {
+  content: "<section>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+}
+.projects::after {
+  content: "<section/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 38rem;
+  left: -2rem;
+}
+.container ul li {
+  color: #08fdd8;
+  font-size: 12px;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+.container ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #08fdd8;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.container ul li:hover {
+  color: #000;
+}
+
+.container ul li:hover span {
+  transform: translateY(0) scale(4);
+}
+.container ul li span:nth-child(1) {
+  --n: 1;
+}
+.about {
+  margin-top: 100px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  padding: 100px;
+  overflow: hidden;
+}
+/* .about .tex :nth-child(1)::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+} */
+.about-paragraph {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  margin-top: 3rem;
+  display: block;
+  color: #fff;
+  width: 50%;
+}
+.about-paragraph a {
+  color: #08fdd8;
+}
+.about-paragraph a:hover {
+  color: #0daa93;
+}
+.contact {
+  margin-top: 100px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  padding: 100px;
+  overflow: hidden;
+}
+.text-zone-contact {
+  position: relative;
+  width: 50%;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+}
+form {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+}
+form::before {
+  content: "<form>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -25rem;
+  left: -2rem;
+}
+form::after {
+  content: "<from/>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 27rem;
+  left: -2rem;
+}
+.contact-paragraph {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  margin-top: 3rem;
+  display: block;
+  color: #fff;
+  width: 50%;
+}
+.contact-paragraph::before {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+}
+.contact-paragraph::after {
+  content: "<p>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 2rem;
+  left: -2rem;
+}
+.input-field1 {
+  position: relative;
+  width: 40%;
+  height: 3rem;
+  line-height: 44px;
+}
+.input-field2 {
+  position: relative;
+  width: 40%;
+  height: 3rem;
+  line-height: 44px;
+  margin-left: 7rem;
+}
+.input-field3 {
+  margin: 10px 0 10px 0;
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  line-height: 44px;
+}
+.input-field4 {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  line-height: 44px;
+}
+.input-field1 input {
+  height: 100%;
+}
+.input-field2 input {
+  height: 100%;
+}
+.input-field3 input {
+  height: 100%;
+}
+.input-field4 input {
+  height: 8rem;
+}
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #909096;
+  transition: 0.2s all;
+  cursor: text;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #909096;
+  background-color: #181818;
+  font-size: 1.2rem;
+}
+input:invalid {
+  outline: 0;
+  color: #fd1056;
+  border-color: #fd1056;
+  transition: 1 ease-in-out;
+}
+input:focus,
+input:valid {
+  border-color: #08fdd8;
+}
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 1rem;
+  display: none;
+  color: #08fdd8;
+}
+form ul li {
+  color: #08fdd8;
+  font-size: 16px;
+  border: 0.1em solid #08fdd8;
+  border-radius: 0.5em;
+  width: 12em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.3em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+
+form ul li span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #08fdd8;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+form ul li:hover {
+  color: #000;
+}
+
+form ul li:hover span {
+  transform: translateY(0) scale(4);
+}
+form ul li span:nth-child(1) {
+  --n: 1;
+}
+/*Animation*/
+@keyframes bg {
+  0% {
+    background-size: 0 1px, 1px 0, 0 1px, 1px 0;
+  }
+  25% {
+    background-size: 100% 1px, 1px 0, 0 1px, 1px 0;
+  }
+  50% {
+    background-size: 100% 1px, 1px 100%, 0 1px, 1px 0;
+  }
+  75% {
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 0;
+  }
+  100% {
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  }
+}
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(253, 16, 86, 1);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes bounce {
+  22.2% {
+    transform: translateY(-25px);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes jello {
+  11.1% {
+    transform: none;
+  }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.hide {
+  display: none;
+}
+/*Animation Bounce*/
+
+.mNavBar {
+  width: 75vw;
+  height: 15vh;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fd2155;
+  width: 50%;
+}
+.mNavBar img {
+  width: 30%;
+}
+.mRight ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mRight ul li {
+  padding-left: 50px;
+  list-style: none;
+  color: #08fdd8;
+  text-decoration: none;
+  font-size: 24px;
+}
+.mRight ul li:hover {
+  color: #0e0e0e;
+}
+.mRight ul li a {
+  color: #08fdd8;
+
+  text-decoration: none;
+}
+.mLeft {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.logoM img {
+  width: 10%;
+}
+@media only screen and (max-width: 568px) {
+  .mRight ul li {
+    display: none;
+  }
+  .linksMUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoM img {
+    width: 20%;
+  }
+  .list-unstyled li {
+    width: 100%;
+  }
+}
+.containerM {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  min-height: 8vh;
+  width: 100%;
+  background: #1d1d1d;
+  transform-style: preserve-3d;
+}
+
+.navbarM {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 3rem;
+}
+
+.menuM {
+  max-width: 72rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.menuM a {
+  color: #fff;
+}
+
+.logoM {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 4rem;
+}
+
+.logoM span {
+  font-weight: 300;
+}
+
+.hamburger-menuM {
+  height: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.barM {
+  width: 1.9rem;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #eee;
+  transition: 0.5s;
+  position: relative;
+}
+
+.barM:before,
+.barM:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #eee;
+  transition: 0.5s;
+}
+
+.barM:before {
+  transform: translateY(-9px);
+}
+
+.barM:after {
+  transform: translateY(9px);
+}
+
+.mainM {
+  position: relative;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 51, 59, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerM.active .barM {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.containerM.active .barM:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.containerM.active .barM:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.containerM.active .mainM {
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+.linksM {
+  width: 100%;
+  right: 0;
+  top: 0;
+  height: 14vh;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.linksM ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+}
+.linksM li {
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.linksM li:hover {
+  box-shadow: 10px 10px 49px 0px rgba(0, 0, 0, 0.75);
+  animation: grow 30s linear 10ms infinite;
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.linksM a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.linksM a:hover {
+  color: #fff;
+}
+
+.containerM.active .linksM a {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.containerM.active .shadowM.one {
+  animation: shadow-one 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+.containerM.active .shadowM.two {
+  animation: shadow-two 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+.containerM.active .mainM:hover + .shadowM.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+}
+
+.containerM.active .mainM:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+@media screen and (max-width: 568px) {
+  .linksM {
+    height: 8vh;
+  }
+}
+.containerM {
+  display: none;
+}
+@media (max-width: 1368px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  #scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background-color: #fd1056;
+  }
+  #progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #fd1056;
+  }
+  .main-menu {
+    display: none;
+  }
+  .page-inner::after {
+    top: 277rem;
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .land-section {
+    width: 100%;
+    padding: 40px;
+  }
+  .heading h1 {
+    font-size: 1rem;
+  }
+  .heading::after {
+    font-size: 0.8rem;
+    margin-left: 8rem;
+    margin-top: -1rem;
+  }
+  .menu-back {
+    display: none;
+  }
+  .projects::after {
+    margin-top: 114rem;
+  }
+  .intro {
+    font-size: 2rem;
+    letter-spacing: 6px;
+    line-height: 4rem;
+  }
+  .intro::before {
+    margin-top: -2rem;
+    font-size: 1.5rem;
+  }
+  .intro::after {
+    margin-top: 3.5rem;
+    margin-left: -2rem;
+  }
+  .intro-paragraph::after {
+    left: 20rem;
+    bottom: 0;
+  }
+  .text-zone img {
+    display: none;
+  }
+  .hide {
+    display: inline;
+  }
+  .work {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+  }
+  .work p {
+    width: 100%;
+  }
+  .about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+  }
+  .about p {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+  }
+  .contact p {
+    width: 100%;
+  }
+  .text-zone-contact {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  .header-div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .intro-h2 {
+    font-size: 2rem;
+  }
+  .heading h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .input-field1 {
+    width: 100%;
+  }
+  .input-field2 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .input-field3 {
+    height: 3rem;
+  }
+  .containerM {
+    display: block;
+  }
+}
